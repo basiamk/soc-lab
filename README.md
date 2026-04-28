@@ -15,3 +15,9 @@
 - Configured isolated labnet LAN segment
 - All VMs communicating through pfSense
 - Active Directory domain configured on Windows Server 2022
+
+## Phase 2 - Complete ✅
+- Deployed Wazuh SIEM on Ubuntu Server 192.168.1.20
+- Connected 4 agents: Windows 10, Windows Server 2022, Kali, Ubuntu Desktop
+- Configured UFW firewall rules for Wazuh ports
+- Installed Sysmon on Windows endpoints
