@@ -17,3 +17,8 @@ Attack → Check SIEM → Document → Fix gaps in Phase 4
 | 8 | T1486 | Ransomware precursor | Atomic Red Team | | | | |
 | 9 | T1557 | LLMNR Poisoning | Responder | | | | |
 | 10 | T1201 | SIM Swap precursor | Hydra + enum | | | | |
+| 1 | T1046 | Network Service Discovery | Nmap | nmap -sS -sV -O 192.168.1.30 | PARTIAL | 10 | 
+Windows logged application errors from SYN flood. 
+No specific port scan rule fired. 
+Detection gap: need custom rule for rapid port scanning. 
+Fix in Phase 4. |
