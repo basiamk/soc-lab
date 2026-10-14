@@ -1,5 +1,5 @@
 # SOC Automation & Purple Team Lab
-
+![Lab Network Architecture](architecture/diagrams/network-diagram.svg)
 ## Network Topology
 | VM | Role | IP |
 |---|---|---|
