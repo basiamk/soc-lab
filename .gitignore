@@ -1,0 +1,40 @@
+# Sensitive files — never commit these
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+passwords.txt
+*password*
+*credentials*
+*secret*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Large binary files
+*.vmdk
+*.vmx
+*.iso
+*.ova
+*.ovf
+
+# Log files
+*.log
+*.gz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
