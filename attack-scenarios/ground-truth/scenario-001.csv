@@ -1,0 +1,9 @@
+timestamp_utc,technique,source,destination,description
+2026-10-26T08:29:57.335Z,T1110,192.168.2.40,192.168.1.30,hydra rdp brute force vs 192.168.1.30 account labuser wordlist 10 passwords
+2026-10-27T04:22:41.693Z,T1059.001,192.168.2.40,,scenario A - base64 encoded powershell command on 192.168.1.30
+2026-10-27T04:28:58.872Z,T1059.001,192.168.2.40,,scenario B - download cradle simulation on 192.168.1.30
+2026-10-27T04:42:10.149Z,T1059.001,192.168.2.40,,scenario C - AMSI bypass string attempt on 192.168.1.30
+2026-10-27T12:12:50.765Z,T1059.001,192.168.2.40,,scenario A rerun - base64 encoded powershell on 192.168.1.30
+2026-10-27T12:12:50.770Z,T1059.001,192.168.2.40,,scenario B rerun - download cradle simulation on 192.168.1.30
+2026-10-27T12:12:50.772Z,T1059.001,192.168.2.40,,scenario C rerun - AMSI bypass string on 192.168.1.30
+2026-11-09T09:29:57.923Z,T1059.001,192.168.2.40,,scenario A second rerun - encoded command with working 4104 logging
