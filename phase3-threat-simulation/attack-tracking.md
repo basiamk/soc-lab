@@ -31,7 +31,7 @@ Each technique follows this loop:
 | 1 | T1046 | Network Service Discovery | Nmap | nmap -sS -sV -O 192.168.1.30 | Partial | 61061, 60602 | 10, 9 | Windows error events spiked. No dedicated scan rule. Gap for Phase 4. |
 | 2 | T1110 | Brute Force RDP | Hydra | hydra -l labuser -P wordlist.txt rdp://192.168.1.30 -t 4 -V -f | YES | 60122, 60204, 92657 | 5, 10, 6 | Full detection chain. Failures detected individually (60122), threshold fired at level 10 (60204), successful logon detected (92657). Attack duration 6 seconds. Password found on attempt 8 of 10. |
 | 3 | T1059.001 | PowerShell Execution | Native PowerShell | -EncodedCommand / IEX DownloadString / AMSI reflection | FULL (after fix) | 92057, 92213, 92066 | 12, 15, 4 | Initial zero-detection — 4-layer pipeline fix (see troubleshooting-log/007). Rule 92057 now specifically names base64-encoded execution. |
-| 4 | T1003.001 | LSASS Credential Dumping | Metasploit | hashdump via meterpreter | Pending | | | |
+| 4 | T1003.001 | LSASS Credential Dumping | Metasploit (Kiwi/Mimikatz) | load kiwi; getsystem; creds_all | FULL | 92900 | 12 | Initial gap: Sysmon ProcessAccess (Event ID 10) had zero rules defined in SwiftOnSecurity default config — required custom LSASS-targeted rule. Fix documented in troubleshooting-log/008. After fix: specific, named detection — "possible credential dump" — fired correctly. |
 | 5 | T1021.001 | RDP Lateral Movement | xfreerdp | xfreerdp /u:labuser /p:... /v:192.168.1.30 | Pending | | | |
 | 6 | T1105 | Ingress Tool Transfer | PowerShell | Invoke-WebRequest to download payload | Pending | | | |
 | 7 | T1078 | Valid Account Abuse | net use | net use with domain credentials | Pending | | | |
